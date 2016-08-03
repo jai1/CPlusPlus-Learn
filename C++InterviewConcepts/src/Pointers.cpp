@@ -18,6 +18,34 @@ Pointers::~Pointers() {
 
 void Pointers::run() {
 	plusPlusAssociativity();
+    effectOfNew();
+}
+
+void Pointers::effectOfNew() {
+    char *ptr;
+    cout<<"Address of ptr(&ptr)="<<&ptr<<endl;
+    cout<<"Address in ptr(ptr)="<<ptr<<endl;
+    // Not Initialized
+    // cout<<"Value in address in ptr(*ptr)="<<*ptr<<endl;
+    cout<<"************************************"<<endl;
+    char **ptr2;
+    cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
+    // Garbage
+    cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
+    // Not Initialized
+    // cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
+    cout<<"************************************"<<endl;
+    ptr2 = new char*(0);
+    cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
+    cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
+    // Not Initialized
+    cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
+    cout<<"************************************"<<endl;
+    *ptr2 = ptr;
+    cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
+    cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
+    cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
+    cout<<"************************************"<<endl;
 }
 
 void Pointers::plusPlusAssociativity() {

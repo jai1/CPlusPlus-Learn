@@ -18,6 +18,8 @@ public:
 	void run();
 
 	void plusPlusAssociativity();
+
+    void effectOfNew();
 };
 
 #endif /* POINTERS_H_ */

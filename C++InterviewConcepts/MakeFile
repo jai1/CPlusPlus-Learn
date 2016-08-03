@@ -1,0 +1,36 @@
+
+# Tutorial - http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+# $@ means thing (singular) to the left of :
+# Tab is important
+# $< all things (plural) to the right of :
+
+IDIR =inc
+CC=g++
+CFLAGS=-I$(IDIR)
+
+ODIR=obj
+LDIR=lib
+SDIR=src
+
+# Libraries to use
+LIBS=
+
+_DEPS = $(wildcard *.h) 
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = $(wildcard *.o)
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+_SRC = $(wildcard *.cpp)
+SRC = $(patsubst %,$(SDIR)/%,$(_SRC))
+
+$(ODIR)/%.o: $(SRC) $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+hellomake: $(SDIR)/*.cpp  
+	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ core $(IDIR)/*~ $(SDIR)/*~ hellomake 

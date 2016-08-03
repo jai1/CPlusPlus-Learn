@@ -17,12 +17,12 @@ public:
 	void run();
 
 private:
-	int OOPConcepts::divide (int a, int b);
-	float OOPConcepts::divide (float a, float b);
+	int divide (int a, int b);
+	float divide (float a, float b);
 // need -fpermissive since float and int come under the same hierarchry
-	void OOPConcepts::operatorOverloading();
-	void OOPConcepts::virtualDestructors();
-	void OOPConcepts::functionOverloading();
+	void operatorOverloading();
+	void virtualDestructors();
+	void functionOverloading();
 };
 
 #endif /* OOPCONCEPTS_H_ */
