@@ -39,13 +39,25 @@ void Pointers::effectOfNew() {
     cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
     cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
     // Not Initialized
-    cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
+    // cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
     cout<<"************************************"<<endl;
     *ptr2 = ptr;
     cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
     cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
     cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
     cout<<"************************************"<<endl;
+    ptr = new char('c');
+    cout<<"Address of ptr(&ptr)="<<&ptr<<endl;
+    cout<<"Address in ptr(ptr)="<<ptr<<endl;
+    // Not Initialized
+    cout<<"Value in address in ptr(*ptr)="<<*ptr<<endl;
+    cout<<"************************************"<<endl;
+    *ptr2 = ptr;
+    cout<<"Address of ptr2(&ptr2)="<<&ptr2<<endl;
+    cout<<"Address in ptr2(ptr2)="<<ptr2<<endl;
+    cout<<"Value in address in ptr2(*ptr2)="<<*ptr2<<endl;
+    cout<<"Value in address in *ptr2(**ptr2)="<<**ptr2<<endl;
+    cout<<"************************************"<<endl;    
 }
 
 void Pointers::plusPlusAssociativity() {
