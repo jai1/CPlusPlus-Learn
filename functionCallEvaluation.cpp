@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<thread>
 using namespace std;
 
 class A {
@@ -19,6 +19,11 @@ class B {
     B(A obj) {}
 };
 
+
+class Functor {
+    public:
+        void operator()() {}
+};
 
 /*
     Expressions that can be evaluated as function definitions will
@@ -44,4 +49,7 @@ int main() {
     B obj3(A());
     B obj4(A(1));
     B obj5(obj2);
+
+    // Ok
+    thread t1(Functor());
 }
