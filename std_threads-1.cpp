@@ -4,11 +4,12 @@
 using namespace std;
 
 /*
-    Thread 
+    Thread vs processes 
     ==pros==
     - light weight
     - low overhead
     - communication through shared memory is faster than IPC
+    IPC - https://en.wikipedia.org/wiki/Inter-process_communication
     ==cons==
     - Can't be scaled accross distributed systems 
         -- some people use IPC for thread communication to make it scalable
