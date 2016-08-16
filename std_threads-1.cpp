@@ -124,4 +124,10 @@ int main() {
     // detached thread can't be reattached 
 
     // join and attach errors are run time errors - not compile time 
+
+    // thread can only be moved NOT copied
+
+    // Oversubscription - number of threads > num of CPU * num of threads
+    // leads to degradation of performance due to context switching
+    cout << "Number of cores = " << thread::hardware_concurrency()<<endl;
 }
