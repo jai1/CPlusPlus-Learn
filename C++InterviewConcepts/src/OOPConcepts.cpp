@@ -47,7 +47,8 @@ void OOPConcepts::run() {
 	// d. Minimize level of hierarchies
 	// e. Inheritance breaks encapsulation. (since a child can access parents protected members)
 
-	// Koenig Lookup - Argument Dependent Lookup for namespaces only - not applicable to classses
+	// Koenig Lookup - Argument Dependent Lookup for namespaces only - not applicable to classes
+	//
 
 }
 
