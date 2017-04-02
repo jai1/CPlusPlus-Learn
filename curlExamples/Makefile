@@ -1,6 +1,6 @@
 CXXFLAGS =  -O2 -g -Wall -fmessage-length=0
-LIBS = -lboost_system -lcurl
-TARGET = example1 example2
+LIBS = -lcurl -lboost_system
+TARGET = curl_asio_with_socket_reuse easy_interface_with_cb old_curl_asio_without_socket_reuse
 
 all: $(TARGET)
 
@@ -10,8 +10,14 @@ clean:
 %.o: %.cpp
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-example1: example1.o
+curl_asio_with_socket_reuse: curl_asio_with_socket_reuse.o
 	$(CXX) -o $@ $^ $(LIBS)
 
-example2: example2.o
+curl_asio_without_socket_reuse: curl_asio_without_socket_reuse.o
+	$(CXX) -o $@ $^ $(LIBS)
+
+old_curl_asio_without_socket_reuse: old_curl_asio_without_socket_reuse.o
+	$(CXX) -o $@ $^ $(LIBS) 
+
+easy_interface_with_cb: easy_interface_with_cb.o    
 	$(CXX) -o $@ $^ $(LIBS) 
