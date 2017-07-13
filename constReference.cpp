@@ -21,3 +21,33 @@ int main() {
 
 // Output
 // t = -10a = 1 // Note that a is corrupted
+
+/*
+Same thing happens with shared pointer:-
+#include <iostream>
+#include <memory>
+using namespace std;
+
+typedef shared_ptr<int> SharedInt;
+
+SharedInt getInt() {
+    int a = -30;
+    return make_shared<int>(a);
+}
+
+const SharedInt& getInt2() {
+    const SharedInt& t = getInt();
+    cout<<"t = "<<*t<<endl;
+    return t;
+}
+
+int main() {
+    const SharedInt& a = getInt2();
+    cout<<"a = "<<*a<<endl;
+}
+
+// Output
+// t = -10a = 1 // Note that a is corrupted
+
+
+*/
