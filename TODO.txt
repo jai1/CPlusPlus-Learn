@@ -1,1 +1,2 @@
-https://www.youtube.com/playlist?list=PL5jc9xFGsL8FWtnZBeTqZBbniyw0uHyaH
+- [ ] https://www.youtube.com/playlist?list=PL5jc9xFGsL8FWtnZBeTqZBbniyw0uHyaH
+- [ ] Add more details to learnTemplates.cpp

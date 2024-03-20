@@ -23,7 +23,7 @@ public:
 
 class YellowDog : public Dog {
 public:
-	string color = "Colorless";
+	string color = "Yellow";
 	void bark() {
 		cout<<color<<" Dog has barked"<<endl;
 	}
@@ -79,7 +79,7 @@ int main() {
     //                  will be of type base class and not derived.
 
     YellowDog a;
-    // print "Colorless Dog has barked"
+    // print "Yellow Dog has barked"
     a.bark();
     
     Dog b = a;

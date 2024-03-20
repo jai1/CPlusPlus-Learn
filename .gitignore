@@ -37,3 +37,6 @@
 doxygen
 *.layout
 *.depend
+
+#IDE
+.idea/

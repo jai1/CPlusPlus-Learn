@@ -11,27 +11,31 @@ class A {
         cout<<"A Constructed with i = "<< i <<endl;
     }
     ~A() {
-        cout<<"A Desructed with i = " << i <<endl;
+        cout<<"A Destructed with i = " << i <<endl;
     }
 };
 
-A global(7);
+A global(0);
 
 int main() {
-    A obj[] = {-1,-2,-3};
-    vector<A> vect({1, 2, 3});
-    // A(4) never destructed
-    A* ptr1 = new A(4);
-    A* ptr2 = new A(5);
+    A obj[] = {1,2,3};
+    vector<A> vect;
+    vect.push_back(A(4));
+    vect.push_back(A(5));
+    vect.push_back(A(6));
 
-    // Uncommenting below statement will not destruct 7
+    // A(4) never destructed
+    A* ptr1 = new A(7);
+    A* ptr2 = new A(8);
+
+    // Uncommenting below statement will not destruct 0 (global variable)
     // throw exception();
     { 
         // Deleted first since it's block ends first
-        A obj(100);   
+        A obj(9);
     }
 
-    // delete ptr doestwo things - deallocate memory and call destructor
+    // delete ptr does two things - first calls the destructor and then deallocates memory.
     delete ptr2;
 
     return 0;

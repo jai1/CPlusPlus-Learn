@@ -5,7 +5,7 @@ STL containers and algorithm functions use either of the following to perform se
 a. (!(x<y) && !(y<x)) -- equivalence
 b. x==y -- equality
 
-Mathematically they are both the same BUT programatically the following are called:-
+Mathematically they are both the same BUT programmatically the following are called:-
 a. bool operator<(const Class& obj) -- equivalence 
 b. bool operator==(const Class& obj) -- equality
 

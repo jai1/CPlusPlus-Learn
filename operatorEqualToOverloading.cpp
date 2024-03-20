@@ -9,6 +9,7 @@ class A {
     public:
         A (int a) : a(a) {}
         bool operator==(const A& obj) {
+            cout<<"operator== called on "<<this->a<<endl;
             return a == obj.a;
         }
 };
